@@ -1,0 +1,21 @@
+---
+title: "car mileage amn"
+author: "Joseph Kilgallen"
+date: "10/26/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(janitor)
+```
+
+
+
+```{r}
+# create an exploratory jitter plot of car mileage data
+ggplot(mpg, aes(x = class, y = cty)) +
+  geom_jitter(aes(color = class)) +
+  labs( x= "Car Class", y = "City gas mileage (mpg)")
+```
